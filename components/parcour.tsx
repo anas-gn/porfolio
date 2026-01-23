@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function AcademicJourney() {
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [visibleItems, setVisibleItems] = useState({})
-  const sectionRef = useRef(null)
-  const containerRef = useRef(null)
+  const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({})
+  const sectionRef = useRef<HTMLElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +21,13 @@ export default function AcademicJourney() {
       setScrollProgress(progress)
 
       const items = document.querySelectorAll('[data-journey-item]')
-      const newVisibleItems = {}
+      const newVisibleItems: Record<string, boolean> = {}
 
       items.forEach((item) => {
+        const htmlItem = item as HTMLElement
         const rect = item.getBoundingClientRect()
         const isVisible = rect.top < windowHeight * 0.75
-        newVisibleItems[item.dataset.journeyItem] = isVisible
+        newVisibleItems[htmlItem.dataset.journeyItem || ''] = isVisible
       })
 
       setVisibleItems(newVisibleItems)
@@ -203,7 +204,7 @@ export default function AcademicJourney() {
           </h2>
           <div className="h-px w-32 bg-gradient-to-r from-transparent via-amber-700 to-transparent mx-auto mb-8"></div>
           <p className="text-gray-400 mt-6 text-sm uppercase tracking-[0.2em] animate-float-up font-light" style={{ animationDelay: '0.2s' }}>
-            Une trajectoire d'excellence
+            Une trajectoire d excellence
           </p>
         </div>
 

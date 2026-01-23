@@ -9,6 +9,7 @@ export default function AboutHero() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsVisible(true)
   }, [])
 
@@ -196,13 +197,13 @@ export default function AboutHero() {
 
           {/* Description */}
           <p className="text-gray-300 mb-6 leading-relaxed font-light text-lg">
-            Je suis un ingénieur logiciel passionné spécialisé dans l'architecture cloud, l'analyse 
+            Je suis un ingénieur logiciel passionné spécialisé dans architecture cloud, analyse 
             de données et le développement full-stack. Je construis des applications scalables et 
             haute performance qui transforment des idées complexes en solutions numériques élégantes.
           </p>
 
           <p className="text-gray-400 mb-10 leading-relaxed font-light">
-            Avec une expertise dans les plateformes cloud, l'analyse de big data et l'architecture logicielle moderne, 
+            Avec une expertise dans les plateformes cloud, analyse de big data et architecture logicielle moderne, 
             je me concentre sur la création de systèmes robustes qui génèrent de la valeur métier. 
             Chaque projet est une opportunité de résoudre des problèmes complexes.
           </p>
