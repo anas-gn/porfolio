@@ -64,19 +64,19 @@ export default function Projects() {
 
         @keyframes goldBorder {
           0%, 100% {
-            box-shadow: inset 0 0 20px rgba(217, 119, 6, 0.1), 0 0 20px rgba(217, 119, 6, 0.1);
+            box-shadow: inset 0 0 20px rgba(129, 140, 248, 0.1), 0 0 20px rgba(129, 140, 248, 0.1);
           }
           50% {
-            box-shadow: inset 0 0 40px rgba(217, 119, 6, 0.2), 0 0 40px rgba(217, 119, 6, 0.2);
+            box-shadow: inset 0 0 40px rgba(129, 140, 248, 0.2), 0 0 40px rgba(129, 140, 248, 0.2);
           }
         }
 
         @keyframes imageGlow {
           0%, 100% {
-            box-shadow: inset 0 0 0px rgba(217, 119, 6, 0.1);
+            box-shadow: inset 0 0 0px rgba(129, 140, 248, 0.1);
           }
           50% {
-            box-shadow: inset 0 0 20px rgba(217, 119, 6, 0.15);
+            box-shadow: inset 0 0 20px rgba(129, 140, 248, 0.15);
           }
         }
 
@@ -98,13 +98,13 @@ export default function Projects() {
 
         .project-card {
           background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%);
-          border: 1px solid rgba(217, 119, 6, 0.2);
+          border: 1px solid rgba(129, 140, 248, 0.2);
           transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .project-card:hover {
-          border-color: rgba(217, 119, 6, 0.5);
-          box-shadow: 0 0 30px rgba(217, 119, 6, 0.15);
+          border-color: rgba(129, 140, 248, 0.5);
+          box-shadow: 0 0 30px rgba(129, 140, 248, 0.15);
         }
 
         .project-image {
@@ -119,7 +119,7 @@ export default function Projects() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(135deg, transparent 40%, rgba(217, 119, 6, 0.1) 50%, transparent 60%);
+          background: linear-gradient(135deg, transparent 40%, rgba(129, 140, 248, 0.1) 50%, transparent 60%);
           animation: shine 4s infinite;
           z-index: 10;
           pointer-events: none;
@@ -135,24 +135,24 @@ export default function Projects() {
         }
 
         .tech-tag {
-          background: rgba(217, 119, 6, 0.1);
-          border: 1px solid rgba(217, 119, 6, 0.3);
-          color: rgba(217, 119, 6, 0.8);
+          background: rgba(129, 140, 248, 0.1);
+          border: 1px solid rgba(129, 140, 248, 0.3);
+          color: rgba(129, 140, 248, 0.8);
           transition: all 0.3s ease;
         }
 
         .tech-tag:hover {
-          background: rgba(217, 119, 6, 0.2);
-          border-color: rgba(217, 119, 6, 0.6);
-          box-shadow: 0 0 10px rgba(217, 119, 6, 0.2);
+          background: rgba(129, 140, 248, 0.2);
+          border-color: rgba(129, 140, 248, 0.6);
+          box-shadow: 0 0 10px rgba(129, 140, 248, 0.2);
         }
 
         .glow-text {
-          text-shadow: 0 0 15px rgba(217, 119, 6, 0.3);
+          text-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
         }
 
         .divider-gold {
-          background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.5), transparent);
+          background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.5), transparent);
           height: 1px;
         }
       `}</style>
