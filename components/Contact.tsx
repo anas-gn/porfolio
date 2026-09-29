@@ -106,17 +106,17 @@ export default function Contact() {
       }
 
       .glow-text {
-        text-shadow: 0 0 15px rgba(217, 119, 6, 0.3);
+        text-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
       }
 
       .divider-gold {
-        background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.5), transparent);
+        background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.5), transparent);
         height: 1px;
       }
 
       .contact-input {
         background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(5, 5, 5, 0.95) 100%);
-        border: 1px solid rgba(217, 119, 6, 0.2);
+        border: 1px solid rgba(129, 140, 248, 0.2);
         color: white;
         font-weight: 300;
         letter-spacing: 0.05em;
@@ -132,13 +132,13 @@ export default function Contact() {
 
       .contact-input:focus {
         outline: none;
-        border-color: rgba(217, 119, 6, 0.6);
-        box-shadow: inset 0 0 20px rgba(217, 119, 6, 0.1), 0 0 20px rgba(217, 119, 6, 0.2);
+        border-color: rgba(129, 140, 248, 0.6);
+        box-shadow: inset 0 0 20px rgba(129, 140, 248, 0.1), 0 0 20px rgba(129, 140, 248, 0.2);
       }
 
       .submit-btn {
         background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(5, 5, 5, 0.95) 100%);
-        border: 1px solid rgba(217, 119, 6, 0.3);
+        border: 1px solid rgba(129, 140, 248, 0.3);
         color: white;
         font-weight: 300;
         font-size: 0.875rem;
@@ -158,14 +158,14 @@ export default function Contact() {
         left: -100%;
         width: 100%;
         height: 100%;
-        background: rgba(217, 119, 6, 0.2);
+        background: rgba(129, 140, 248, 0.2);
         transition: left 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         z-index: -1;
       }
 
       .submit-btn:hover:not(:disabled) {
-        border-color: rgba(217, 119, 6, 0.6);
-        box-shadow: 0 0 30px rgba(217, 119, 6, 0.2), inset 0 0 20px rgba(217, 119, 6, 0.1);
+        border-color: rgba(129, 140, 248, 0.6);
+        box-shadow: 0 0 30px rgba(129, 140, 248, 0.2), inset 0 0 20px rgba(129, 140, 248, 0.1);
       }
 
       .submit-btn:hover:not(:disabled)::before {
@@ -183,9 +183,9 @@ export default function Contact() {
 
       .success-message {
         background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%);
-        border: 1px solid rgba(217, 119, 6, 0.5);
-        border-left: 3px solid rgba(217, 119, 6, 0.8);
-        color: rgba(217, 119, 6, 0.8);
+        border: 1px solid rgba(129, 140, 248, 0.5);
+        border-left: 3px solid rgba(129, 140, 248, 0.8);
+        color: rgba(129, 140, 248, 0.8);
         padding: 16px 20px;
         border-radius: 2px;
         font-size: 0.875rem;
