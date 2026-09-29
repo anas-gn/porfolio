@@ -1,223 +1,75 @@
-// src/components/AboutHero.tsx
-'use client'
-
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
-export default function AboutHero() {
-  const [isVisible, setIsVisible] = useState(false)
+const stack = ['Next.js', 'React', 'Flutter', 'Node.js', 'Linux']
 
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsVisible(true)
-  }, [])
-
+export default function Hero() {
   return (
-    <section className="min-h-screen text-white flex items-center pt-20 relative overflow-hidden bg-black">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-amber-950/10 opacity-80"></div>
+    <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28 pb-16">
+      {/* Halos + grille */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[720px] -translate-x-1/2 rounded-full bg-indigo-600/25 blur-[140px]" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-purple-600/20 blur-[130px]" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+          backgroundSize: '56px 56px',
+          maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+        }}
+      />
 
-      <style>{`
-        @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-120px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="rise">
+          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs text-indigo-200">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            Ingénieur logiciel · Full-stack
+          </span>
 
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(120px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
+          <h1 className="mt-6 text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            Je conçois des produits <span className="text-gradient">web et mobile</span> fiables et élégants.
+          </h1>
 
-        @keyframes subtleFloat {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-400">
+            Je suis Anas Gana. Je construis des applications scalables et performantes,
+            de l&apos;architecture cloud à l&apos;interface, pour transformer des idées complexes en
+            solutions numériques claires.
+          </p>
 
-        @keyframes goldGlowPulse {
-          0%, 100% {
-            box-shadow: 0 0 30px rgba(217, 119, 6, 0.2), inset 0 0 30px rgba(217, 119, 6, 0.05);
-          }
-          50% {
-            box-shadow: 0 0 50px rgba(217, 119, 6, 0.4), inset 0 0 50px rgba(217, 119, 6, 0.1);
-          }
-        }
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              href="#contact"
+              className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-3 font-medium text-white shadow-lg shadow-indigo-500/25 transition hover:shadow-indigo-500/40"
+            >
+              Discutons
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link href="#projets" className="glass rounded-xl px-6 py-3 font-medium text-white transition hover:bg-white/10">
+              Voir mes projets
+            </Link>
+          </div>
 
-        @keyframes slideInDown {
-          from {
-            opacity: 0;
-            transform: translateY(-40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+          <ul className="mt-10 flex flex-wrap gap-2">
+            {stack.map((s) => (
+              <li key={s} className="rounded-lg border border-white/10 px-3 py-1 text-xs text-gray-400">{s}</li>
+            ))}
+          </ul>
+        </div>
 
-        @keyframes lineReveal {
-          from {
-            width: 0;
-          }
-          to {
-            width: 100%;
-          }
-        }
-
-        .animate-fade-in-left {
-          animation: fadeInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-
-        .animate-fade-in-right {
-          animation: fadeInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-
-        .animate-subtle-float {
-          animation: subtleFloat 4s ease-in-out infinite;
-        }
-
-        .animate-gold-glow {
-          animation: goldGlowPulse 3s ease-in-out infinite;
-        }
-
-        .animate-slide-down {
-          animation: slideInDown 0.8s ease-out forwards;
-        }
-
-        .animate-line-reveal {
-          animation: lineReveal 1.2s ease-out forwards;
-        }
-
-        .photo-frame {
-          position: relative;
-          width: 350px;
-          height: 420px;
-          border-radius: 0;
-          overflow: hidden;
-          border: 1px solid rgba(217, 119, 6, 0.3);
-        }
-
-        .photo-frame::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(135deg, transparent 40%, rgba(217, 119, 6, 0.1) 50%, transparent 60%);
-          animation: shine 4s infinite;
-          z-index: 10;
-          pointer-events: none;
-        }
-
-        .photo-frame::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          border: 1px solid rgba(217, 119, 6, 0.2);
-          pointer-events: none;
-        }
-
-        @keyframes shine {
-          0% {
-            transform: translateX(-100%) translateY(-100%);
-          }
-          100% {
-            transform: translateX(100%) translateY(100%);
-          }
-        }
-
-        .glow-accent {
-          text-shadow: 0 0 20px rgba(217, 119, 6, 0.5);
-        }
-
-        .divider-gold {
-          background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.5), transparent);
-          height: 1px;
-        }
-      `}</style>
-
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-        {/* Photo Section */}
-        <div
-          className={`flex justify-center lg:justify-start ${
-            isVisible ? 'animate-fade-in-right' : 'opacity-0'
-          }`}
-        >
-          <div className="relative animate-subtle-float">
-            {/* Subtle glow behind photo */}
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 to-black/50 rounded-sm blur-3xl opacity-40 w-80 h-96 -z-10"></div>
-
-            {/* Photo frame */}
-            <div className="photo-frame animate-gold-glow">
+        <div className="rise mx-auto w-full max-w-sm" style={{ animationDelay: '.15s' }}>
+          <div className="relative rounded-[2rem] bg-gradient-to-br from-indigo-500/60 via-white/10 to-purple-500/60 p-px">
+            <div className="overflow-hidden rounded-[2rem] bg-[#0b0d18]">
               <Image
                 src="/images/profile.jpg"
                 alt="Anas Gana"
-                width={350}
-                height={420}
-                className="w-full h-full object-cover"
+                width={400}
+                height={480}
                 priority
                 unoptimized
+                className="aspect-[5/6] w-full object-cover"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Text Section */}
-        <div
-          className={`${
-            isVisible ? 'animate-fade-in-left' : 'opacity-0'
-          }`}
-        >
-          {/* Heading */}
-          <div className={`mb-8 ${isVisible ? 'animate-slide-down' : ''}`}>
-            <h1 className="text-5xl lg:text-6xl font-light tracking-wider mb-4 leading-tight">
-              ANAS GANA
-            </h1>
-            <div className="divider-gold mb-6 animate-line-reveal"></div>
-            <p className="text-amber-700 uppercase tracking-[0.2em] font-light text-sm">
-              Software Engineer & Architect
-            </p>
-          </div>
-
-          {/* Description */}
-          <p className="text-gray-300 mb-6 leading-relaxed font-light text-lg">
-            Je suis un ingénieur logiciel passionné spécialisé dans architecture cloud, analyse 
-            de données et le développement full-stack. Je construis des applications scalables et 
-            haute performance qui transforment des idées complexes en solutions numériques élégantes.
-          </p>
-
-          <p className="text-gray-400 mb-10 leading-relaxed font-light">
-            Avec une expertise dans les plateformes cloud, analyse de big data et architecture logicielle moderne, 
-            je me concentre sur la création de systèmes robustes qui génèrent de la valeur métier. 
-            Chaque projet est une opportunité de résoudre des problèmes complexes.
-          </p>
-
-          {/* CTA Button */}
-          <div className="flex gap-6">
-            <Link
-              href="#contact"
-              className="relative px-8 py-3 text-white font-light uppercase tracking-[0.1em] text-sm group overflow-hidden"
-            >
-              <div className="absolute inset-0 border border-amber-700 group-hover:border-amber-600 transition-colors duration-300"></div>
-              <div className="absolute inset-0 bg-amber-700 origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" style={{ zIndex: -1 }}></div>
-              <span className="relative group-hover:text-black transition-colors duration-300">Discutons</span>
-            </Link>
           </div>
         </div>
       </div>
