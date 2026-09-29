@@ -128,10 +128,10 @@ export default function AcademicJourney() {
 
         @keyframes goldGlow {
           0%, 100% {
-            box-shadow: 0 0 20px rgba(217, 119, 6, 0.2), inset 0 0 20px rgba(217, 119, 6, 0.05);
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.2), inset 0 0 20px rgba(129, 140, 248, 0.05);
           }
           50% {
-            box-shadow: 0 0 30px rgba(217, 119, 6, 0.4), inset 0 0 30px rgba(217, 119, 6, 0.1);
+            box-shadow: 0 0 30px rgba(129, 140, 248, 0.4), inset 0 0 30px rgba(129, 140, 248, 0.1);
           }
         }
 
@@ -152,29 +152,29 @@ export default function AcademicJourney() {
         }
 
         .glow-text {
-          text-shadow: 0 0 20px rgba(217, 119, 6, 0.5), 0 0 40px rgba(217, 119, 6, 0.2);
+          text-shadow: 0 0 20px rgba(129, 140, 248, 0.5), 0 0 40px rgba(129, 140, 248, 0.2);
         }
 
         .border-gold {
-          border-color: rgba(217, 119, 6, 0.3);
+          border-color: rgba(129, 140, 248, 0.3);
         }
 
         .border-gold-hover:hover {
-          border-color: rgba(217, 119, 6, 0.6);
+          border-color: rgba(129, 140, 248, 0.6);
         }
 
         .line-gold {
-          background: linear-gradient(to bottom, rgba(217, 119, 6, 0.4), rgba(217, 119, 6, 0.1));
+          background: linear-gradient(to bottom, rgba(129, 140, 248, 0.4), rgba(129, 140, 248, 0.1));
         }
 
         .card-dark {
           background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%);
-          border: 1px solid rgba(217, 119, 6, 0.2);
+          border: 1px solid rgba(129, 140, 248, 0.2);
         }
 
         .card-dark:hover {
-          border: 1px solid rgba(217, 119, 6, 0.5);
-          box-shadow: 0 0 25px rgba(217, 119, 6, 0.15);
+          border: 1px solid rgba(129, 140, 248, 0.5);
+          box-shadow: 0 0 25px rgba(129, 140, 248, 0.15);
         }
       `}</style>
 
@@ -192,7 +192,7 @@ export default function AcademicJourney() {
         className="absolute left-1/2 transform -translate-x-1/2 top-0 w-px bg-gradient-to-b from-amber-600 to-amber-700 origin-top"
         style={{
           height: `${scrollProgress * 100}%`,
-          boxShadow: '0 0 20px rgba(217, 119, 6, 0.8)',
+          boxShadow: '0 0 20px rgba(129, 140, 248, 0.8)',
         }}
       ></div>
 
@@ -253,7 +253,7 @@ export default function AcademicJourney() {
                       isVisible ? 'animate-slide-right' : 'opacity-0'
                     }`}
                     style={{
-                      boxShadow: 'inset 0 0 20px rgba(217, 119, 6, 0.1)',
+                      boxShadow: 'inset 0 0 20px rgba(129, 140, 248, 0.1)',
                     }}
                   >
                     {index + 1}
