@@ -72,10 +72,10 @@ export default function Skills() {
 
         @keyframes goldBorder {
           0%, 100% {
-            box-shadow: inset 0 0 20px rgba(217, 119, 6, 0.1), 0 0 20px rgba(217, 119, 6, 0.1);
+            box-shadow: inset 0 0 20px rgba(129, 140, 248, 0.1), 0 0 20px rgba(129, 140, 248, 0.1);
           }
           50% {
-            box-shadow: inset 0 0 40px rgba(217, 119, 6, 0.2), 0 0 40px rgba(217, 119, 6, 0.2);
+            box-shadow: inset 0 0 40px rgba(129, 140, 248, 0.2), 0 0 40px rgba(129, 140, 248, 0.2);
           }
         }
 
@@ -112,7 +112,7 @@ export default function Skills() {
 
         .skill-card {
           background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%);
-          border: 1px solid rgba(217, 119, 6, 0.2);
+          border: 1px solid rgba(129, 140, 248, 0.2);
           transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
           position: relative;
           overflow: hidden;
@@ -125,15 +125,15 @@ export default function Skills() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(135deg, transparent 40%, rgba(217, 119, 6, 0.05) 50%, transparent 60%);
+          background: linear-gradient(135deg, transparent 40%, rgba(129, 140, 248, 0.05) 50%, transparent 60%);
           animation: shine 4s infinite;
           z-index: 1;
           pointer-events: none;
         }
 
         .skill-card:hover {
-          border-color: rgba(217, 119, 6, 0.5);
-          box-shadow: 0 0 30px rgba(217, 119, 6, 0.15);
+          border-color: rgba(129, 140, 248, 0.5);
+          box-shadow: 0 0 30px rgba(129, 140, 248, 0.15);
         }
 
         .skill-card-content {
@@ -151,11 +151,11 @@ export default function Skills() {
         }
 
         .glow-text {
-          text-shadow: 0 0 15px rgba(217, 119, 6, 0.3);
+          text-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
         }
 
         .divider-gold {
-          background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.5), transparent);
+          background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.5), transparent);
           height: 1px;
         }
 
@@ -164,7 +164,7 @@ export default function Skills() {
           align-items: center;
           gap: 12px;
           padding: 12px 0;
-          border-bottom: 1px solid rgba(217, 119, 6, 0.1);
+          border-bottom: 1px solid rgba(129, 140, 248, 0.1);
           transition: all 0.3s ease;
         }
 
@@ -174,13 +174,13 @@ export default function Skills() {
 
         .skill-item:hover {
           padding-left: 8px;
-          color: rgba(217, 119, 6, 0.8);
+          color: rgba(129, 140, 248, 0.8);
         }
 
         .skill-dot {
           width: 3px;
           height: 3px;
-          background: rgba(217, 119, 6, 0.6);
+          background: rgba(129, 140, 248, 0.6);
           border-radius: 50%;
           flex-shrink: 0;
         }
